@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    >
+    <TextView android:text="1.使用本app前，先在手机设置中的蓝牙选项里，与通信的对方机子进行蓝牙配对\n
+2.再在本app界面中选择本机是客户端或者服务端，注意和通信对方的机子不同即可"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/CONNECTVIEW" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom = "true"
+        android:id= "@+id/bt_bottombar"></RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="连接"
+        android:id="@+id/CONNECTBUTTON"
+        android:layout_above="@+id/bt_bottombar"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="客户端"
+        android:id="@+id/checkBoxClient"
+        android:onClick="onCheckboxClicked"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/CONNECTBUTTON"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="服务端"
+        android:id="@+id/checkBoxServer"
+        android:onClick="onCheckboxClicked"
+        android:layout_marginEnd="32dp"
+        android:layout_alignTop="@+id/checkBoxClient"
+        android:layout_alignEnd="@+id/CONNECTBUTTON" />
+
+
+</RelativeLayout>
